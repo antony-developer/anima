@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ImageRotate</title>
+    <style>
+        img{
+            width: 320px;
+            height: 200px;
+            position: absolute;
+        }
+        .container{
+            width: 350px;
+            height: 200px;
+            position: relative;
+            margin-top: 15%;
+            margin-left: 40%;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transform: rotatex(-10deg) rotatez(-10deg);
+            animation:ror 20s linear infinite ;
+        }
+        @keyframes ror{
+            50%{
+                transform: rotate(30deg);
+            }
+            80%{
+                transform: rotate(30deg);
+            }
+        }
+        .images{
+            width: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate{
+            from{
+
+            }
+            to{
+                transform: rotatey(360deg);
+            }
+        }
+        img:nth-child(1){
+            transform: rotatey(60deg) translatez(300px);
+        }
+        img:nth-child(2){
+            transform: rotatey(120deg) translatez(300px);
+        }img:nth-child(3){
+            transform: rotatey(180deg) translatez(300px);
+        }img:nth-child(4){
+            transform: rotatey(240deg) translatez(300px);
+        }img:nth-child(5){
+            transform: rotatey(300deg) translatez(300px);
+        }img:nth-child(6){
+            transform: rotatey(360deg) translatez(300px);
+        }
+        img:hover{
+            width: 340px;
+            height: 240px;
+            cursor: pointer;
+        }
+        body{
+            background: linear-gradient(90deg,blue,skyblue,blue);
+        }
+        h1{
+            text-align: center;
+            padding-top: 10%;
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="images">
+            <img src="1.mg.jpeg">
+            <img src="2.jpeg">
+            <img src="3.jpeg">
+            <img src="4.jpeg">
+            <img src="5.jpeg">
+            <img src="6.jpeg">
+        </div>
+    </div>
+    <h1>3D animation</h1>
+
+    
+</body>
+</html>
